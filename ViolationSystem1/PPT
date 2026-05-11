@@ -1,0 +1,25 @@
+The ViolationSystem is a web-based application designed for managing and reporting student violations in an educational institution, specifically ACLC (likely a college or school). It uses PHP, MySQL, and HTML/CSS for a role-based system where different user types (admin, teacher, guidance, nonteacher) have varying levels of access and functionality. The system focuses on tracking violations, generating reports, and providing dashboards for oversight.
+
+Features:
+User Authentication and Role Management: Secure login with hashed passwords, session handling, and automatic redirection based on user roles (admin, teacher, guidance, nonteacher). Includes profile management and activity tracking (e.g., last login).
+Violation Reporting: Forms for submitting violation reports, including details like student info (USN, name, grade/section), violation type (predefined or custom "Other"), description, location, evidence uploads (images), and reporter info. Supports file uploads to an "evidences" folder.
+Dashboards and Analytics: Role-specific dashboards displaying statistics such as total violations, pending/dismissed counts, student counts, online users, and charts for analytics. Includes notifications for new violations.
+Student and Advisory Management: Tools for managing student records (senior high, college), advisory assignments, archived students, and user management (e.g., advisers).
+Reporting and Views: "My Reports" sections for viewing personal reports, advisory-specific violations, and summary analytics. Supports filtering by status (pending, dismissed, resolved).
+Evidence Handling: Upload and store evidence files (images) in a dedicated folder, with paths stored in the database.
+Notifications and Status Updates: Badge notifications for new violations, status changes (e.g., submitted to guidance), and marking reports as read.
+Search and Filtering: Search functionality in dashboards, with queries joining tables like violation, violationstatus, strandcourse_tbl, and advisory_tbl.
+Responsive UI: Modern design with sidebar navigation, dark mode toggle, and mobile-friendly layout using CSS and JavaScript.
+Functions:
+Reporting Violations: Users (teachers, nonteachers, guidance) can file reports via forms, which insert data into the "violation" table with status tracking.
+Viewing and Managing Reports: Admins and teachers can view all or advisory-specific violations, update statuses (e.g., submit to guidance), and resolve cases.
+Data Aggregation: Queries to count violations by status, total students, online users, and generate summaries.
+User and Student CRUD: Admins can add/edit students, manage advisory roles, and handle user accounts.
+File Uploads: Handle evidence uploads securely, storing paths in the database.
+Session and Security: Prevent unauthorized access, log activities, and handle errors (e.g., invalid students).
+Sides (Roles):
+Admin: Full access to all features, including user management, student records, violation oversight, analytics, and system-wide reports. Can view all violations, manage advisories, and archive students.
+Teacher: Access to advisory-specific dashboards, reporting violations for their students, viewing "my reports," and submitting cases to guidance. Limited to their assigned sections/grades.
+Guidance: Handles counseling-related tasks, such as receiving submitted violations, managing senior high/college views, and providing guidance-specific reports and summaries.
+Nonteacher: Primarily for reporting violations (similar to teachers but without advisory restrictions), viewing personal reports, and basic dashboard stats. No management access.
+The system uses a MySQL database with tables like "violation" (core reports), "violationstatus" (statuses like Pending/Dismissed), "users" (roles and profiles), "shs_tbl" (students), "advisory_tbl" (teacher assignments), and "strandcourse_tbl" (courses/strands). It emphasizes security (prepared statements, session checks) and usability (role-based UI, notifications).

@@ -1,0 +1,74 @@
+campus_violation_system/
+│
+├── index.php                     → Login page
+├── dashboard.php                 → Main dashboard (after login)
+├── logout.php                    → Logout handler
+│
+├── config/
+│   └── db_connect.php            → MySQL connection (PDO or MySQLi)
+│
+├── includes/
+│   ├── header.php                → Top navigation/header
+│   ├── sidebar.php               → Sidebar navigation
+│   ├── footer.php                → Footer layout
+│   └── session.php               → Session checker (auth)
+│
+├── admin/
+│   ├── admin_dashboard.php       → Admin home page
+│   ├── manage_users.php          → Add/Edit/Delete users
+│   ├── manage_violations.php     → CRUD for violation types
+│   ├── view_reports.php          → View all incident reports
+│   ├── view_logs.php             → Audit trail
+│   ├── backup_restore.php        → Backup or restore database
+│   └── generate_report.php       → Printable report / PDF export
+│
+├── teacher/
+│   ├── teacher_dashboard.php     → Teacher's main page
+│   ├── report_violation.php      → Form to report incident
+│   ├── my_reports.php            → View submitted reports
+│   └── report_view.php           → View single report details
+│
+├── student/
+│   ├── student_dashboard.php     → Student home page
+│   ├── my_violations.php         → List of personal violations
+│   └── view_violation.php        → View specific incident details
+│
+├── violations/
+│   ├── add_violation.php         → Add new violation (form)
+│   ├── edit_violation.php        → Edit violation details
+│   ├── delete_violation.php      → Delete violation record
+│   ├── view_violation.php        → Display violation details
+│   └── upload_evidence.php       → Upload proof files (image, doc)
+│
+├── reports/
+│   ├── generate_pdf.php          → Generate PDF reports
+│   ├── export_excel.php          → Export to Excel/CSV
+│   └── charts_data.php           → Provide JSON for Chart.js
+│
+├── assets/
+│   ├── css/
+│   │   ├── style.css             → Main custom CSS
+│   │   └── bootstrap.min.css     → Bootstrap framework
+│   │
+│   ├── js/
+│   │   ├── main.js               → Custom JS
+│   │   ├── bootstrap.bundle.min.js
+│   │   └── chart.min.js          → Chart.js for statistics
+│   │
+│   ├── img/
+│   │   ├── logo.png              → School logo
+│   │   ├── user_profile/         → User profile pictures
+│   │   └── evidence/             → Uploaded violation proofs
+│   │
+│   └── fonts/
+│       └── (optional font files)
+│ 
+├── uploads/
+│   ├── evidences/                → Uploaded incident images or files
+│   └── backups/                  → Database backups (SQL files)
+│
+├── api/
+│   ├── notification.php          → For sending email or JSON responses
+│   └── fetch_data.php            → For AJAX requests
+│
+└── README.txt                    → Project info / installation guide
